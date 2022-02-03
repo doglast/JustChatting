@@ -1,6 +1,7 @@
 import MessageForm from "./MessageForm";
 import MyMessage from "./MyMessage";
 import TheirMessage from "./TheirMessage";
+import { ApiOutlined } from "@ant-design/icons";
 
 const ChatFeed = (props) =>{
   const { chats, activeChat, userName, messages} = props;
@@ -47,12 +48,24 @@ const ChatFeed = (props) =>{
     })
   }
 
+  const handleLogout = () =>{
+    localStorage.clear();
+    window.location.reload()
+  }
+
   if(!chat)return 'Loading ... ';
 
   return(
     <div className="chat-feed">
       <div className="chat-title-container">
-        <div className="chat-title">{chat.title}</div>
+        <div className="chat-title">
+          <button 
+            onClick={handleLogout} 
+            className="logout">
+                <ApiOutlined className="logout-icon"/>
+          </button> 
+          {chat.title}            
+        </div>
         <div className="chat-subtitle">
           {chat.people.map((person)=>`${person.person.username}`)}
         </div>

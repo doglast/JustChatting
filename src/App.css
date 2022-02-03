@@ -204,6 +204,12 @@
   font-size: 14px;
 }
 
+.logout-icon {
+  top: 1px;
+  position: relative;
+  font-size: 20px;
+}
+
 /* FORM STYLES */
 *,
 *::after,
@@ -264,7 +270,7 @@
   width: 200px;
   transition: all 0.4s;
   cursor: pointer;
-  margin: 5px;
+  margin: 20px;
   width: 90%;
 }
 .button span {
@@ -293,4 +299,21 @@
   color: white;
   text-align: center;
   margin-top: 20px;
+}
+
+.logout {
+  border-radius: 4px;
+  border: none;
+  background-color: red;
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin-left: 80%;
+  height: 30px;
+  width: 15%;
 }
